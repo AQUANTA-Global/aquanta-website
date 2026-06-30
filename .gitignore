@@ -1,0 +1,5 @@
+# AQUANTA website
+.DS_Store
+Thumbs.db
+node_modules/
+.env
