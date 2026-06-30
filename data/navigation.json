@@ -1,0 +1,42 @@
+[
+  {
+    "label": "About",
+    "url": "/about/"
+  },
+  {
+    "label": "Research",
+    "url": "/research/"
+  },
+  {
+    "label": "Technologies",
+    "url": "/technologies/"
+  },
+  {
+    "label": "Applications",
+    "url": "/applications/"
+  },
+  {
+    "label": "Publications",
+    "url": "/publications/"
+  },
+  {
+    "label": "Education",
+    "url": "/education/"
+  },
+  {
+    "label": "Consortium",
+    "url": "/consortium/"
+  },
+  {
+    "label": "Events",
+    "url": "/events/"
+  },
+  {
+    "label": "News",
+    "url": "/news/"
+  },
+  {
+    "label": "Contact",
+    "url": "/contact/"
+  }
+]

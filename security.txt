@@ -1,0 +1,3 @@
+Contact: mailto:security@aquanta.co.jp
+Preferred-Languages: en, ja, bg
+Canonical: https://aquanta.co.jp/security.txt

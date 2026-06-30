@@ -1,4 +1,7 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://aquanta.jp/sitemap.xml
+Disallow: /components/
+Disallow: /data/
+
+Sitemap: https://aquanta.co.jp/sitemap.xml

@@ -1,0 +1,9 @@
+{
+  "name": "AQUANTA",
+  "short_name": "AQUANTA",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#113959",
+  "theme_color": "#113959",
+  "icons": []
+}

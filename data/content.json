@@ -1,0 +1,24 @@
+{
+  "hero": {
+    "eyebrow": "THE WATER WITHIN LIFE",
+    "title": "What if water already knows the answer?",
+    "body": "Aquaphotomics is a scientific and technological framework for understanding biological and material systems through the spectral signatures of water."
+  },
+  "cards": [
+    {
+      "title": "Research",
+      "body": "Aquaphotomics research, water spectral patterns and system diagnostics.",
+      "url": "/research/"
+    },
+    {
+      "title": "Technologies",
+      "body": "Spectral analysis, Aquagram\u00ae methods and future digital services.",
+      "url": "/technologies/"
+    },
+    {
+      "title": "Applications",
+      "body": "Life sciences, agriculture, health, beauty, environment and industry.",
+      "url": "/applications/"
+    }
+  ]
+}
