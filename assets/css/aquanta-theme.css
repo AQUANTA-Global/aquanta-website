@@ -68,8 +68,8 @@ body {
 .site-nav a:hover { color: var(--accent); }
 
 .page-shell {
-  min-height: calc(100vh - var(--header-h) - var(--footer-h));
-  padding: 28px;
+  min-height: calc(100vh - var(--header-h));
+  padding: 28px 28px calc(var(--footer-h) + 28px);
 }
 
 .hero {
@@ -122,6 +122,10 @@ h1 {
 }
 
 .site-footer {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
   min-height: var(--footer-h);
   display: flex;
   align-items: center;
@@ -131,6 +135,7 @@ h1 {
   border-top: 1px solid var(--border);
   background: rgba(17, 57, 89, 0.96);
   font-size: 0.9rem;
+  z-index: 10;
 }
 
 @media (max-width: 820px) {
