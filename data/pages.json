@@ -1,0 +1,92 @@
+{
+  "/": {
+    "title": "AQUANTA",
+    "description": "AQUANTA Co., Ltd. — water intelligence, aquaphotomics research, and advanced water-based technologies.",
+    "canonical": "https://aquanta.co.jp/"
+  },
+  "/about/": {
+    "title": "About | AQUANTA",
+    "description": "About AQUANTA Co., Ltd. and its mission.",
+    "canonical": "https://aquanta.co.jp/about/"
+  },
+  "/research/": {
+    "title": "Research | AQUANTA",
+    "description": "Aquaphotomics research, water science, and scientific activities of AQUANTA.",
+    "canonical": "https://aquanta.co.jp/research/"
+  },
+  "/research/aquaphotomics/": {
+    "title": "Aquaphotomics | AQUANTA",
+    "description": "Aquaphotomics research and its role in understanding water molecular systems.",
+    "canonical": "https://aquanta.co.jp/research/aquaphotomics/"
+  },
+  "/research/water-science/": {
+    "title": "Water Science | AQUANTA",
+    "description": "Water science research related to molecular systems, spectroscopy, and life sciences.",
+    "canonical": "https://aquanta.co.jp/research/water-science/"
+  },
+  "/research/health/": {
+    "title": "Health Research | AQUANTA",
+    "description": "Health-related research applications of aquaphotomics and water molecular analysis.",
+    "canonical": "https://aquanta.co.jp/research/health/"
+  },
+  "/research/food/": {
+    "title": "Food Research | AQUANTA",
+    "description": "Applications of aquaphotomics in food quality, safety, and molecular monitoring.",
+    "canonical": "https://aquanta.co.jp/research/food/"
+  },
+  "/research/environment/": {
+    "title": "Environmental Research | AQUANTA",
+    "description": "Environmental monitoring and water-related research applications.",
+    "canonical": "https://aquanta.co.jp/research/environment/"
+  },
+  "/research/agriculture/": {
+    "title": "Agriculture Research | AQUANTA",
+    "description": "Aquaphotomics applications in agriculture, plants, soils, and biological systems.",
+    "canonical": "https://aquanta.co.jp/research/agriculture/"
+  },
+  "/research/ai-digital-twins/": {
+    "title": "AI and Digital Twins | AQUANTA",
+    "description": "AI, digital twins, and aquaphotomics-based approaches for water and life science systems.",
+    "canonical": "https://aquanta.co.jp/research/ai-digital-twins/"
+  },
+  "/technologies/": {
+    "title": "Technologies | AQUANTA",
+    "description": "AQUANTA technologies for aquaphotomics, water analysis, and advanced scientific applications.",
+    "canonical": "https://aquanta.co.jp/technologies/"
+  },
+  "/applications/": {
+    "title": "Applications | AQUANTA",
+    "description": "Applications of AQUANTA technologies in health, environment, agriculture, food, and industry.",
+    "canonical": "https://aquanta.co.jp/applications/"
+  },
+  "/publications/": {
+    "title": "Publications | AQUANTA",
+    "description": "Scientific publications, articles, and research outputs related to AQUANTA and aquaphotomics.",
+    "canonical": "https://aquanta.co.jp/publications/"
+  },
+  "/education/": {
+    "title": "Education | AQUANTA",
+    "description": "Educational resources, training, and learning materials related to aquaphotomics and water science.",
+    "canonical": "https://aquanta.co.jp/education/"
+  },
+  "/consortium/": {
+    "title": "Consortium | AQUANTA",
+    "description": "AQUANTA consortium, collaborations, and scientific partnership network.",
+    "canonical": "https://aquanta.co.jp/consortium/"
+  },
+  "/events/": {
+    "title": "Events | AQUANTA",
+    "description": "AQUANTA events, conferences, symposia, and scientific meetings.",
+    "canonical": "https://aquanta.co.jp/events/"
+  },
+  "/news/": {
+    "title": "News | AQUANTA",
+    "description": "Latest news and updates from AQUANTA.",
+    "canonical": "https://aquanta.co.jp/news/"
+  },
+  "/contact/": {
+    "title": "Contact | AQUANTA",
+    "description": "Contact AQUANTA Co., Ltd.",
+    "canonical": "https://aquanta.co.jp/contact/"
+  }
+}

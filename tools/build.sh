@@ -19,12 +19,14 @@ while IFS= read -r file; do
 sed -i \
   -e "s|/assets/css/aquanta-theme.css[^\"']*|/assets/css/aquanta-theme.css?v=${AQUANTA_VERSION}|g" \
   -e "s|/assets/js/aquanta-core.js[^\"']*|/assets/js/aquanta-core.js?v=${AQUANTA_VERSION}|g" \
-  "$file"
-  
+  -e "s|/assets/icons/logo.png[^\"']*|/assets/icons/logo.png?v=${AQUANTA_VERSION}|g" \
+  -e "s|/assets/icons/logo.svg[^\"']*|/assets/icons/logo.svg?v=${AQUANTA_VERSION}|g" \
+  "$file"  
 done
 
 printf "%s\n" "$AQUANTA_VERSION" > "$BUILD_VERSION_FILE"
 
+python3 ./tools/head.py
 "$SCRIPT_DIR/sitemap.sh"
 "$SCRIPT_DIR/check.sh"
 
