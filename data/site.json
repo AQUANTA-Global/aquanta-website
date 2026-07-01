@@ -1,7 +1,269 @@
 {
-  "siteName": "AQUANTA",
-  "legalName": "AQUANTA Co., Ltd.",
-  "domain": "https://aquanta.co.jp",
-  "tagline": "The Water Within Life",
-  "description": "AQUANTA official website for aquaphotomics science, technologies and applications."
+  "framework": {
+    "name": "AQUANTA Framework",
+    "version": "3.0"
+  },
+
+  "site": {
+    "siteName": "AQUANTA",
+    "legalName": "AQUANTA Co., Ltd.",
+    "domain": "https://aquanta.co.jp",
+    "language": "en",
+    "tagline": "The Water Within Life",
+
+    "defaultTitle": "AQUANTA",
+
+    "defaultDescription":
+      "AQUANTA official website for aquaphotomics science, technologies and applications.",
+
+    "author": "AQUANTA Co., Ltd.",
+
+    "copyright":
+      "© AQUANTA Co., Ltd. All rights reserved.",
+
+    "theme": "aquanta-theme",
+
+    "logo": "/assets/icons/logo.png",
+
+    "favicon": "/assets/icons/logo.png",
+
+    "appleTouchIcon":
+      "/assets/icons/apple-touch-icon.png"
+  },
+
+  "assets": {
+
+    "css": [
+      "/assets/css/aquanta-theme.css"
+    ],
+
+    "javascript": [
+      "/assets/js/aquanta-core.js"
+    ]
+
+  },
+
+  "navigation": [
+
+    {
+      "title":"About",
+      "path":"/about/"
+    },
+
+    {
+      "title":"Research",
+      "path":"/research/"
+    },
+
+    {
+      "title":"Technologies",
+      "path":"/technologies/"
+    },
+
+    {
+      "title":"Applications",
+      "path":"/applications/"
+    },
+
+    {
+      "title":"Publications",
+      "path":"/publications/"
+    },
+
+    {
+      "title":"Education",
+      "path":"/education/"
+    },
+
+    {
+      "title":"Consortium",
+      "path":"/consortium/"
+    },
+
+    {
+      "title":"Events",
+      "path":"/events/"
+    },
+
+    {
+      "title":"News",
+      "path":"/news/"
+    },
+
+    {
+      "title":"Contact",
+      "path":"/contact/"
+    }
+
+  ],
+
+  "pages":[
+
+    {
+      "path":"/",
+
+      "template":"landing",
+
+      "title":"AQUANTA",
+
+      "description":
+        "AQUANTA official website for aquaphotomics science, technologies and applications.",
+
+      "priority":1.0,
+
+      "changefreq":"weekly"
+    },
+
+    {
+      "path":"/about/",
+
+      "template":"page",
+
+      "title":"About | AQUANTA",
+
+      "description":
+        "About AQUANTA Co., Ltd. and its mission.",
+
+      "priority":0.9,
+
+      "changefreq":"monthly"
+    },
+
+    {
+      "path":"/research/",
+
+      "template":"page",
+
+      "title":"Research | AQUANTA",
+
+      "description":
+        "Aquaphotomics research, water science and scientific activities.",
+
+      "priority":0.9,
+
+      "changefreq":"monthly"
+    },
+
+    {
+      "path":"/technologies/",
+
+      "template":"page",
+
+      "title":"Technologies | AQUANTA",
+
+      "description":
+        "Advanced AQUANTA technologies.",
+
+      "priority":0.8,
+
+      "changefreq":"monthly"
+    },
+
+    {
+      "path":"/applications/",
+
+      "template":"page",
+
+      "title":"Applications | AQUANTA",
+
+      "description":
+        "Applications of AQUANTA technologies.",
+
+      "priority":0.8,
+
+      "changefreq":"monthly"
+    },
+
+    {
+      "path":"/publications/",
+
+      "template":"page",
+
+      "title":"Publications | AQUANTA",
+
+      "description":
+        "Scientific publications.",
+
+      "priority":0.8,
+
+      "changefreq":"weekly"
+    },
+
+    {
+      "path":"/education/",
+
+      "template":"page",
+
+      "title":"Education | AQUANTA",
+
+      "description":
+        "Educational resources.",
+
+      "priority":0.7,
+
+      "changefreq":"monthly"
+    },
+
+    {
+      "path":"/consortium/",
+
+      "template":"page",
+
+      "title":"Consortium | AQUANTA",
+
+      "description":
+        "Scientific collaborations and partners.",
+
+      "priority":0.7,
+
+      "changefreq":"monthly"
+    },
+
+    {
+      "path":"/events/",
+
+      "template":"page",
+
+      "title":"Events | AQUANTA",
+
+      "description":
+        "Scientific meetings and conferences.",
+
+      "priority":0.8,
+
+      "changefreq":"weekly"
+    },
+
+    {
+      "path":"/news/",
+
+      "template":"news",
+
+      "title":"News | AQUANTA",
+
+      "description":
+        "Latest news from AQUANTA.",
+
+      "priority":0.8,
+
+      "changefreq":"daily"
+    },
+
+    {
+      "path":"/contact/",
+
+      "template":"page",
+
+      "title":"Contact | AQUANTA",
+
+      "description":
+        "Contact AQUANTA Co., Ltd.",
+
+      "priority":0.6,
+
+      "changefreq":"yearly"
+    }
+
+  ]
+
 }
