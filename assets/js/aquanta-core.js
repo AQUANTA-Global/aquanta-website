@@ -43,43 +43,43 @@ async function loadHomeContent() {
   `).join('');
 }
 
-async function updateBrandBreadcrumb() {
-    console.log("updateBrandBreadcrumb()");
-    const brand = document.querySelector('#brand-breadcrumb');
-    if (!brand) return;
+function updateBrandBreadcrumb() {
+  console.log("Breadcrumb function called");
 
-    let path = window.location.pathname;
+  const brand = document.querySelector('#brand-breadcrumb');
+  console.log("brand =", brand);
 
-    if (!path.endsWith('/')) {
-        path += '/';
-    }
+  let path = window.location.pathname;
+  if (!path.endsWith('/')) path += '/';
 
-    const route = AQUANTA.routes[path];
+  console.log("path =", path);
+  console.log("AQUANTA.routes =", AQUANTA.routes);
 
-    if (!route) {
-        brand.textContent = AQUANTA.site.site.siteName;
-        return;
-    }
+  const route = AQUANTA.routes[path];
+  console.log("route =", route);
 
-    brand.textContent = route.label;
+  if (!brand) return;
+
+  if (!route || !route.label) {
+    brand.textContent = AQUANTA.site.site.siteName;
+    return;
+  }
+
+  brand.textContent = route.label;
 }
-
 document.addEventListener('DOMContentLoaded', async () => {
+  await loadSiteData();
 
-    await loadComponent('[data-header]', '/components/header.html');
-    console.log(document.querySelector('#brand-breadcrumb'));
-    await updateBrandBreadcrumb();
+  await loadComponent('[data-header]', '/components/header.html');
 
-    await loadComponent('[data-footer]', '/components/footer.html');
+  updateBrandBreadcrumb();
 
-    const year = document.querySelector('#year');
+  await loadComponent('[data-footer]', '/components/footer.html');
 
-    if (year) {
-        year.textContent = new Date().getFullYear();
-    }
+  const year = document.querySelector('#year');
+  if (year) year.textContent = new Date().getFullYear();
 
-    if (document.body.dataset.page === 'home') {
-        await loadHomeContent();
-    }
-
+  if (document.body.dataset.page === 'home') {
+    await loadHomeContent();
+  }
 });
