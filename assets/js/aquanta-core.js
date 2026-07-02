@@ -44,7 +44,7 @@ async function loadHomeContent() {
 }
 
 async function updateBrandBreadcrumb() {
-
+    console.log("updateBrandBreadcrumb()");
     const brand = document.querySelector('#brand-breadcrumb');
     if (!brand) return;
 
