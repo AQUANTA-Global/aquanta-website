@@ -68,13 +68,18 @@ function updateBrandBreadcrumb() {
   brand.textContent = route.label;
 }
 document.addEventListener('DOMContentLoaded', async () => {
+  console.log("1 DOMContentLoaded");
   await loadSiteData();
-
+  console.log("2 loadSiteData OK");
+  
   await loadComponent('[data-header]', '/components/header.html');
+  console.log("3 header loaded");
 
   updateBrandBreadcrumb();
+  console.log("4 ubreadcrumb updated");
 
   await loadComponent('[data-footer]', '/components/footer.html');
+  console.log("5 footer loaded");
 
   const year = document.querySelector('#year');
   if (year) year.textContent = new Date().getFullYear();
