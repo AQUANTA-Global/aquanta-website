@@ -5,7 +5,7 @@ COMMAND="${1:-build}"
 shift || true
 
 case "$COMMAND" in
-  build) ./tools/build.sh ;;
+  build) ./tools/build.sh "$@" ;;
   check) ./tools/check.sh ;;
   sitemap) ./tools/sitemap.sh ;;
   clean) ./tools/clean.sh ;;
