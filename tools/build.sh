@@ -4,6 +4,7 @@ set -euo pipefail
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 cd "$ROOT"
 
+RUN_ROUTES=false
 RUN_HEAD=false
 RUN_SITEMAP=false
 RUN_CHECK=false
@@ -18,6 +19,7 @@ Usage:
   ./AQUANTA_BUILD.sh build [options]
 
 Options:
+  --routes      Generate routes.json
   --head        Generate <head> sections
   --sitemap     Generate sitemap.xml
   --check       Run production checks
@@ -32,6 +34,11 @@ Examples:
   ./AQUANTA_BUILD.sh build --head --sitemap --check
   ./AQUANTA_BUILD.sh build --all
 EOF
+}
+
+run_routes() {
+  echo "== ROUTES =="
+  python ./tools/routes.py
 }
 
 run_head() {
@@ -68,6 +75,9 @@ fi
 
 for arg in "$@"; do
   case "$arg" in
+    --routes)
+      RUN_ROUTES=true
+      ;;
     --head)
       RUN_HEAD=true
       ;;
@@ -84,6 +94,7 @@ for arg in "$@"; do
       RUN_VERSION=true
       ;;
     --all)
+      RUN_ROUTES=true
       RUN_HEAD=true
       RUN_SITEMAP=true
       RUN_CHECK=true
@@ -111,6 +122,7 @@ echo "======================================"
 $RUN_VERSION && run_version
 $RUN_ASSETS && run_assets
 $RUN_HEAD && run_head
+$RUN_ROUTES && run_routes
 $RUN_SITEMAP && run_sitemap
 $RUN_CHECK && run_check
 

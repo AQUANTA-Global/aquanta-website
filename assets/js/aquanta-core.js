@@ -1,8 +1,28 @@
+const AQUANTA = {
+    site: null,
+    routes: null
+};
+
+async function loadSiteData() {
+
+    AQUANTA.site =
+        await fetch('/data/site.json').then(r => r.json());
+
+    AQUANTA.routes =
+        await fetch('/data/routes.generated.json').then(r => r.json());
+
+}
+
 async function loadComponent(selector, url) {
   const target = document.querySelector(selector);
   if (!target) return;
+
   const response = await fetch(url);
   target.innerHTML = await response.text();
+}
+
+function currentPath() {
+  return window.location.pathname.replace(/\/?$/, "/");
 }
 
 async function loadHomeContent() {
@@ -23,14 +43,43 @@ async function loadHomeContent() {
   `).join('');
 }
 
+async function updateBrandBreadcrumb() {
+
+    const brand = document.querySelector('#brand-breadcrumb');
+    if (!brand) return;
+
+    let path = window.location.pathname;
+
+    if (!path.endsWith('/')) {
+        path += '/';
+    }
+
+    const route = AQUANTA.routes[path];
+
+    if (!route) {
+        brand.textContent = AQUANTA.site.site.siteName;
+        return;
+    }
+
+    brand.textContent = route.label;
+}
+
 document.addEventListener('DOMContentLoaded', async () => {
-  await loadComponent('[data-header]', '/components/header.html');
-  await loadComponent('[data-footer]', '/components/footer.html');
 
-  const year = document.querySelector('#year');
-  if (year) year.textContent = new Date().getFullYear();
+    await loadComponent('[data-header]', '/components/header.html');
 
-  if (document.body.dataset.page === 'home') {
-    await loadHomeContent();
-  }
+    await updateBrandBreadcrumb();
+
+    await loadComponent('[data-footer]', '/components/footer.html');
+
+    const year = document.querySelector('#year');
+
+    if (year) {
+        year.textContent = new Date().getFullYear();
+    }
+
+    if (document.body.dataset.page === 'home') {
+        await loadHomeContent();
+    }
+
 });

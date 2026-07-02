@@ -1,0 +1,47 @@
+{
+  "generatedAt": "2026-07-02T07:07:53.312169+00:00",
+  "/about/": {
+    "label": "AQUANTA / About",
+    "file": "about/index.html"
+  },
+  "/applications/": {
+    "label": "AQUANTA / Applications",
+    "file": "applications/index.html"
+  },
+  "/consortium/": {
+    "label": "AQUANTA / Consortium",
+    "file": "consortium/index.html"
+  },
+  "/contact/": {
+    "label": "AQUANTA / Contact",
+    "file": "contact/index.html"
+  },
+  "/education/": {
+    "label": "AQUANTA / Education",
+    "file": "education/index.html"
+  },
+  "/events/": {
+    "label": "AQUANTA / Events",
+    "file": "events/index.html"
+  },
+  "/": {
+    "label": "AQUANTA",
+    "file": "index.html"
+  },
+  "/news/": {
+    "label": "AQUANTA / News",
+    "file": "news/index.html"
+  },
+  "/publications/": {
+    "label": "AQUANTA / Publications",
+    "file": "publications/index.html"
+  },
+  "/research/": {
+    "label": "AQUANTA / Research",
+    "file": "research/index.html"
+  },
+  "/technologies/": {
+    "label": "AQUANTA / Technologies",
+    "file": "technologies/index.html"
+  }
+}
