@@ -21,7 +21,7 @@ if [[ -z "$(git status --porcelain)" ]]; then
   exit 0
 fi
 
-git add .
+git add -A
 git commit -m "$COMMIT_MESSAGE"
 git push origin "$GIT_BRANCH"
 
