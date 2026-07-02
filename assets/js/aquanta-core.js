@@ -67,7 +67,7 @@ async function updateBrandBreadcrumb() {
 document.addEventListener('DOMContentLoaded', async () => {
 
     await loadComponent('[data-header]', '/components/header.html');
-
+    console.log(document.querySelector('#brand-breadcrumb'));
     await updateBrandBreadcrumb();
 
     await loadComponent('[data-footer]', '/components/footer.html');
