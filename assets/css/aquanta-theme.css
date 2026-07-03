@@ -93,7 +93,7 @@ body {
   place-items: center;
   border: 1px solid var(--border);
   border-radius: 999px;
-  color: var(--accent);
+  color: #ff0000 ; var(--accent);
 }
 
 .site-nav {
