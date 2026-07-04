@@ -43,6 +43,7 @@ body {
     align-items:center;
     gap:12px;
     text-decoration:none;
+    color: #ff0000;
 }
 
 #brand-breadcrumb {
