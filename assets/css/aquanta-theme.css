@@ -45,6 +45,9 @@ body {
     text-decoration:none;
 }
 
+#brand-breadcrumb {
+    color: #ff0000;
+}
 .site-logo{
     width:48px;
     height:48px;
