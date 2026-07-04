@@ -10,6 +10,7 @@ RUN_SITEMAP=false
 RUN_CHECK=false
 RUN_ASSETS=false
 RUN_VERSION=false
+RUN_VERSION_STAMP=false
 
 show_help() {
 cat << EOF
@@ -67,6 +68,11 @@ run_version() {
   ./tools/version.sh
 }
 
+run_version_stamp() {
+  echo "== VERSION STAMP =="
+  python ./tools/version.py
+}
+
 if [ "$#" -eq 0 ]; then
   echo "AQUANTA quick build: no modules selected."
   echo "Use --help to see options."
@@ -93,6 +99,9 @@ for arg in "$@"; do
     --version)
       RUN_VERSION=true
       ;;
+    --stamp)
+      RUN_VERSION_STAMP=true
+      ;;
     --all)
       RUN_ROUTES=true
       RUN_HEAD=true
@@ -100,6 +109,7 @@ for arg in "$@"; do
       RUN_CHECK=true
       RUN_ASSETS=true
       RUN_VERSION=true
+      RUN_VERSION_STAMP=true
       ;;
     --help|-h)
       show_help
@@ -119,12 +129,13 @@ echo "======================================"
 echo "AQUANTA Build"
 echo "======================================"
 
+$RUN_VERSION_STAMP && run_version_stamp
 $RUN_VERSION && run_version
-$RUN_ASSETS && run_assets
-$RUN_HEAD && run_head
 $RUN_ROUTES && run_routes
-$RUN_SITEMAP && run_sitemap
+$RUN_HEAD && run_head
 $RUN_CHECK && run_check
+$RUN_SITEMAP && run_sitemap
+$RUN_ASSETS && run_assets
 
 echo
 echo "Build completed."

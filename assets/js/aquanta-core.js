@@ -13,6 +13,10 @@ async function loadSiteData() {
 
 }
 
+function versioned(path) {
+  return `${path}?v=${AQUANTA.version.version}`;
+}
+
 async function loadComponent(selector, url) {
   const target = document.querySelector(selector);
   if (!target) return;

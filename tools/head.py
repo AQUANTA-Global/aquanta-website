@@ -41,7 +41,7 @@ def load_text(path: Path) -> str:
 def save_text(path: Path, text: str) -> None:
     path.write_text(text, encoding="utf-8", newline="\n")
 
-def render_head(page: dict, site: dict, assets: dict) -> str:
+def render_head( page: dict, site: dict, assets: dict, version: str) -> str:
     domain = site["domain"].rstrip("/")
     path = page["path"]
 
@@ -63,14 +63,15 @@ def render_head(page: dict, site: dict, assets: dict) -> str:
     canonical = html.escape(canonical_value, quote=True)
 
     favicon = html.escape(site.get("favicon", "/assets/icons/logo.png"), quote=True)
+    favicon += f"?v={version}"
 
     css_links = "\n".join(
-        f'<link rel="stylesheet" href="{html.escape(css, quote=True)}">'
+        f'<link rel="stylesheet" href="{html.escape(css, quote=True)}?v={version}">'
         for css in assets.get("css", [])
     )
 
     js_links = "\n".join(
-        f'<script defer src="{html.escape(js, quote=True)}"></script>'
+        f'<script defer src="{html.escape(js, quote=True)}?v={version}"></script>'
         for js in assets.get("javascript", [])
     )
 
@@ -93,7 +94,10 @@ def main() -> None:
     if not SITE_JSON.exists():
         raise FileNotFoundError("Missing data/site.json")
 
-    template = load_text(HEAD_TEMPLATE)
+    version_data = json.loads(
+        load_text(ROOT / "data" / "version.generated.json")
+    )
+    version = version_data["version"]    
     data = json.loads(load_text(SITE_JSON))
 
     site = data["site"]
@@ -125,7 +129,7 @@ def main() -> None:
             skipped += 1
             continue
 
-        head = render_head(template, pages[url], site, assets)
+        head = render_head(pages[url], site, assets, version)
         output = source.replace(PLACEHOLDER, head)
 
         save_text(file, output)
