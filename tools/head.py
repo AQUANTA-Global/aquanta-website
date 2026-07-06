@@ -85,6 +85,7 @@ def render_head( page: dict, site: dict, assets: dict, version: str) -> str:
 <link rel="icon" type="image/png" href="{favicon}">
 
 {css_links}
+<link rel="icon" type="image/png" href="{logo}">
 {js_links}'''
 
 def main() -> None:
