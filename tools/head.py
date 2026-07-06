@@ -64,6 +64,8 @@ def render_head( page: dict, site: dict, assets: dict, version: str) -> str:
 
     favicon = html.escape(site.get("favicon", "/assets/icons/logo.png"), quote=True)
     favicon += f"?v={version}"
+    logo = html.escape(site.get("logo", "/assets/icons/aquaphotomics-logo.png"), quote=True)
+    logo += f"?v={version}"
 
     css_links = "\n".join(
         f'<link rel="stylesheet" href="{html.escape(css, quote=True)}?v={version}">'
@@ -83,7 +85,6 @@ def render_head( page: dict, site: dict, assets: dict, version: str) -> str:
 <link rel="canonical" href="{canonical}">
 
 <link rel="icon" type="image/png" href="{favicon}">
-
 {css_links}
 <link rel="icon" type="image/png" href="{logo}">
 {js_links}'''
