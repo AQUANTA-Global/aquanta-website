@@ -14,6 +14,7 @@ async function loadSiteData() {
 }
 
 function versioned(path) {
+  return `${path}`;
   return `${path}?v=${AQUANTA.version.version}`;
 }
 
