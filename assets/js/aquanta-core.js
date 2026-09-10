@@ -81,7 +81,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   console.log("3 header loaded");
 
   await loadComponent('[data-particles]', '/components/particles.html');
-  console.log("3 header loaded");
+  console.log("3.1 particles loaded");
 
   updateBrandBreadcrumb();
   console.log("4 ubreadcrumb updated");
